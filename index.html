@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="layout">
+        <aside>
+            <h1>Library</h1>
+            <form action="">
+                <label for="title">What is the title of the book?</label>
+                <input class="title" type="text" name="title" >
+                <label for="author">Who is the author of the book?</label>
+                <input class="author" type="text" name="author" >
+                <label for="pages">How many pages?</label>
+                <input class="pages" type="text" name="pages" >
+                <div class="formRow">
+                    <label for="read">I read this book</label>
+                    <input type="checkbox" name="read" id="check">
+                </div>
+                <button class="addBook" type="submit">Add Book</button>
+            </form>
+        </aside>
+        <main>
+            <div class="statusCards">
+                <div class="status">
+                    <p class="statusBookRead" > Books Read: </p>
+                </div>
+                <div class="status">
+                    <p class="statusBookUnread" > Books On-Progress: </p>
+                </div>
+                <div class="status">
+                    <p class="totalBooks">Total Books:</p>
+                </div>
+                <button class="deleteAll" >Delete all</button>
+            </div>
+            <div class="cardsWrapper">
+                
+            </div>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

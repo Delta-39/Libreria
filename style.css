@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --green: #A5A58D;
+    --pink: #EDDCD2;
+    --orange: #CB997E;
+    font-size: 16px;
+    /* font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Public Sans', sans-serif; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1;
+    grid-template-areas:
+        'aside main main main';
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--green);
+    padding: 20px;
+}
+
+aside h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 5px;
+}
+
+aside form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-family: 'Public Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+form input {
+    background-color: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.formRow {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.formRow input {
+    margin-left: 15px;
+    transform: scale(1.3);
+    background-color: none;
+    color: none;
+}
+
+form button {
+    align-self: center;
+    width: 70%;
+    padding: 10px;
+    font-family: 'Public Sans', sans-serif;
+    border: none;
+    background-color: var(--orange);
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+form button:hover{
+    color:var(--orange);
+    background-color: black;
+}
+
+form button:hover:active{
+    transform: translate(4px,5px);
+}
+
+main {
+    grid-area: main;
+    background-color: var(--pink);
+}
+
+.statusCards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.statusCards .deleteAll {
+    padding: 10px;
+    font-family: 'Public Sans', sans-serif;
+    border: none;
+    background-color: rgb(165, 57, 57);
+    color: rgb(207, 207, 207);
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.deleteAll:hover{
+    transform: translateY(-5px);
+}
+
+.deleteAll:hover:active{
+    transform: scale(0.9);
+}
+
+.status p {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.cardsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.cardsWrapper .card:nth-child(n+5) {
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid rgb(165, 57, 57);
+    padding: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(to top, rgb(165, 57, 57) 0%, rgb(165, 57, 57) 100%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    transition: background-size 0.3s;
+    color: rgb(165, 57, 57);
+    font-weight: 700;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+
+.onProgress{
+    color: #d68268;
+    font-weight: 700;
+}
+
+.finish{
+    color: #88da92;
+    font-weight: 700;
+}
+
+.delete:hover{
+    background-size: 100% 100%;
+    color: white;
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.wrapper p {
+    padding-left: 5px;
+    font-weight: 400;
+}
+
+.read {
+    width: 70%;
+    align-self: center;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+    border: none;
+    background-color: var(--orange);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.read:hover {
+    background-color: black;
+    color: var(--orange);
+}
